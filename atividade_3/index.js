@@ -9,3 +9,5 @@ let a= area;
 let quadrado= a = ( area * area );
 
 console.log("O resultado é:" + quadrado)
+
+

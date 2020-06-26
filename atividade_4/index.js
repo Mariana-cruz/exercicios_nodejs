@@ -3,118 +3,63 @@ let rs = require('readline-sync')
 console.log("Olá, usuário!")
 
 console.log("Qual o seu dia de nascimento?")
-let dia = rs.question('Dia\n')
+let dia = rs.questionFloat('')
 
 console.log("Beleza! Agora qual o mês?")
-let mes = rs.question('Mes\n')
+let mes = rs.questionFloat('')
 
 console.log("Seu signo é: ")
 
-if (mes == 1) {
-    if (dia <=20){
-        console.log('Capricórnio')
-    }
-    else {
-        console.log('Aquário')
-    }
-}
-else if (mes==2) {
-    if (dia <=18){
-        console.log('Aquário')
-    }
-    else {
-      console.log('Peixes')  
-    }
-}
+// trocar if/else por switch/case
 
-else if (mes==3){
-    if (dia <=20){
-        console.log('Peixes')
-    }
-    else{
-        console.log('Áries')
-    }
-}
+switch (mes){
+    case 1: "1"
+    dia <= 20 ? console.log ("Capricórnio") : console.log("Aquário");
+    break;
 
-else if (mes==4){
-    if (dia <=20){
-        console.log('Áries')
-    }
-    else{
-        console.log('Touro')
-    }
-}
+    case 2 : "2"
+    dia <=18 ? console.log("Aquário") : console.log("Peixes");
+    break;
 
-else if (mes==5){
-    if (dia <=20){
-        console.log('Touro')
-    }
-    else{
-        console.log('Gemêos')
-    }
-}
+    case 3 :"3"
+    dia <= 20 ?  console.log("Peixes") : console.log("Áries");
+    break;
 
-else if (mes==6){
-    if (dia <=20){
-        console.log('Gemêos')
-    }
-    else{
-        console.log('Câncer')
-    }
-}
+    case 4 : "4"
+    dia <= 20 ?  console.log("Áries") : console.log("Touro");
+    break;
 
-else if (mes==7){
-    if (dia <=22){
-        console.log('Câncer')
-    }
-    else{
-        console.log('Leão')
-    }
-}
+    case 5 : "5"
+    dia <= 20 ?  console.log("Touro") : console.log("Gêmeos");
+    break;
 
-else if (mes==8){
-    if (dia <=22){
-        console.log('Leão')
-    }
-    else{
-        console.log('Virgem')
-    }
-}
+    case 6 :"6"
+    dia <= 20 ?  console.log("Gêmeos") : console.log("Câncer");
+    break;
 
-else if (mes==9){
-    if (dia <=22){
-        console.log('Virgem')
-    }
-    else{
-        console.log('Libra')
-    }
-}
+    case 7:"7"
+    dia <= 22 ?  console.log("Câncer") : console.log("Leão");
+    break;
 
-else if (mes==10){
-    if (dia <=22){
-        console.log('Libra')
-    }
-    else{
-        console.log('Escorpião')
-    }
-}
+    case 8 :"8"
+    dia <= 22 ? console.log("Leão") : console.log("Virgem");
+    break;
 
-else if (mes==11){
-    if (dia <=21){
-        console.log('Escorpião')
-    }
-    else{
-        console.log('Sagitário')
-    }
-}
+    case 9:"9"
+    dia <= 22 ? console.log("Virgem") : console.log("Libra");
+    break;
 
-else if (mes==12){
-    if (dia <=21){
-        console.log('Ságitario')
-    }
-    else{
-        console.log('Capricórnio')
-    }
+    case 10:"10"
+    dia <=22 ? console.log("Libra") : console.log("Escorpião");
+    break;
+
+    case 11:"11"
+    dia <= 21 ? console.log("Escorpião") : console.log("Sagitário");
+    break;
+
+    case 12:"12"
+    dia <= 21 ? console.log("Sagitário") : console.log("Capricórnio");
+    break;
 }
 
 console.log("E agora, qual seu ano de nascimento?")

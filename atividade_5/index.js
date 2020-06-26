@@ -1,5 +1,10 @@
-// ## Importe a biblioteca ##
+let rs = require('readline-sync')
+
+console.log("Olá, usuário!")
 
 
+console.log("Digite qualquer coisa")
+let resposta = rs.question("")
 
-// ## Faça o código ##
+console.log("Sua mensagem possui " + resposta.length + " caracteres")
+

@@ -9,10 +9,29 @@ console.log("Você está lavando as mãos regularmente?")
 let maos = rs.question("")
 
 
-if ( mascara + maos == "sim"){
-  console.log("Parabéns, você está seguindo as recomendações da OMS!")
+let comparacao = (mascara=="sim" && maos=="sim") ? 1 : 3
+comparacao = (mascara=="nao" && maos=="nao") ? 2 : comparacao
+comparacao = mascara!=maos ? 3 : comparacao
+
+switch ( comparacao ) {
+  case 1 :
+    console.log("Parabéns!");
+    break;
+  case 2:
+    console.log("Que vergonha!");
+    break;
+  default:
+    console.log("Siga as recomendações da OMS");
+    break;
 }
 
-else {
-    console.log("Que vergonha! Deveria se preocupar com a sua saúde e da sua família.")
-}
+
+
+
+
+
+
+
+
+
+
